@@ -1,0 +1,36 @@
+{
+  "name": "blovvm-sequencer",
+  "version": "0.0.1",
+  "description": "The sequencer of blobvm testnet sidechain",
+  "main": "src/api.js",
+  "type": "module",
+  "scripts": {
+    "start": "node src/api.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/weavevm/blobvm-sequencer.git"
+  },
+  "keywords": [
+    "blobvm",
+    "EIP4844",
+    "eip-4844",
+    "blobs",
+    "sidechain"
+  ],
+  "author": "charmful0x",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/weavevm/blobvm-sequencer/issues"
+  },
+  "homepage": "https://github.com/weavevm/blobvm-sequencer#readme",
+  "dependencies": {
+    "@irys/sdk": "^0.1.21",
+    "@planetscale/database": "^1.16.0",
+    "axios": "^1.6.8",
+    "body-parser": "^1.20.2",
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.5",
+    "express": "^4.19.2"
+  }
+}
