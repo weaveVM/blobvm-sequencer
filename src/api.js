@@ -3,6 +3,7 @@ import bodyParser from "body-parser";
 import cors from "cors";
 
 import { deployContract } from "./utils/deploy.js";
+import { evaluateTx } from "./utils/transaction.js";
 import { psGetState } from "./utils/planetscale.js";
 
 const app = express();
@@ -35,7 +36,7 @@ app.use(
 app.get("/tx/:id", async (req, res) => {
   try {
     const { id } = req.params;
-    const data = await deployContract(id);
+    const data = await evaluateTx(id);
     res.send(data);
   } catch (error) {
     console.log(error);
@@ -46,10 +47,10 @@ app.get("/state/:id", async (req, res) => {
   try {
     const { id } = req.params;
     const data = await psGetState(id);
-    console.log(typeof data)
     res.json(data);
   } catch (error) {
     console.log(error);
+    return {error: "invalid_contract_address"}
   }
 });
 
@@ -62,6 +63,20 @@ app.post("/deploy", async (req, res) => {
     res.send(tx);
   } catch (error) {
     console.log(error);
+    return {result: false}
+  }
+});
+
+app.post("/transactions", async (req, res) => {
+  try {
+    const { txid } = req.body;
+
+    const tx = await evaluateTx(txid);
+
+    res.send(tx);
+  } catch (error) {
+    console.log(error);
+    return {result: false}
   }
 });
 
