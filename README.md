@@ -1,0 +1,36 @@
+## Build and run
+
+You need to configure the `.env` config file by adding your [Irys](https://irys.xyz) and [Planetscale](https://planetscale.com) params. Check  `.env.example`
+
+```bash
+git clone https://github.com/weavevm/blobvm-sequencer
+
+cd blobvm-sequencer
+
+npm i && npm run start
+```
+
+## Endpoints
+
+### Base endpoint: https://blobvm-sequencer-c60bec254262.herokuapp.com
+
+### Contract state
+
+```bash
+GET /state/:contract_address
+```
+
+### Deploy a contract
+
+```bash
+curl -X POST -H "Content-Type: application/json" -d '{"txid": "contract_eip4844_txid"}' base_endpoint/deploy 
+```
+
+### Send a transaction
+
+```bash
+curl -X POST -H "Content-Type: application/json" -d '{"txid": "eip4844_txid"}' base_endpoint/transactions 
+```
+
+## License
+This repository is licensed under the [MIT License](./LICENSE)

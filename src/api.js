@@ -33,16 +33,6 @@ app.use(
   }),
 );
 
-app.get("/tx/:id", async (req, res) => {
-  try {
-    const { id } = req.params;
-    const data = await evaluateTx(id);
-    res.send(data);
-  } catch (error) {
-    console.log(error);
-  }
-});
-
 app.get("/state/:id", async (req, res) => {
   try {
     const { id } = req.params;
