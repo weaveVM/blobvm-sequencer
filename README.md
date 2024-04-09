@@ -10,9 +10,11 @@ cd blobvm-sequencer
 npm i && npm run start
 ```
 
+Also you need to initialize your Planetscale tables with the SQL statements of [init.sql](./init.sql)
+
 ## Endpoints
 
-### Base endpoint: https://blobvm-sequencer-c60bec254262.herokuapp.com
+#### Base endpoint: https://blobvm-sequencer-c60bec254262.herokuapp.com
 
 ### Contract state
 
