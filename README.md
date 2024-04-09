@@ -17,7 +17,7 @@ npm i && npm run start
 ### Contract state
 
 ```bash
-GET /state/:contract_address
+curl -X GET base_endpoint/state/your_contract_addr
 ```
 
 ### Deploy a contract
