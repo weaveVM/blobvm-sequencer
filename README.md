@@ -1,9 +1,16 @@
+<p align="center">
+  <a href="https://wvm.dev">
+    <img src="https://raw.githubusercontent.com/weaveVM/.github/main/profile/bg.png">
+  </a>
+  <h3 align="center">blobVM protocol sequencer</h3>
+</p>
+
 ## Build and run
 
 You need to configure the `.env` config file by adding your [Irys](https://irys.xyz) and [Planetscale](https://planetscale.com) params. Check  `.env.example`
 
 ```bash
-git clone https://github.com/weavevm/blobvm-sequencer
+git clone https://github.com/weavevm/blobvm-sequencer.git
 
 cd blobvm-sequencer
 
