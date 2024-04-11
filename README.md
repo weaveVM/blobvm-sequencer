@@ -2,7 +2,6 @@
   <a href="https://wvm.dev">
     <img src="https://raw.githubusercontent.com/weaveVM/.github/main/profile/bg.png">
   </a>
-  <h3 align="center">blobVM protocol sequencer</h3>
 </p>
 
 ## Build and run
