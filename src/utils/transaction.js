@@ -31,7 +31,7 @@ export async function evaluateTx(txid) {
 
     const normalizedSourceCode = normalizedString.split("").join("");
 
-    const code = `const msg = {}; msg.sender = "${from}"; `.concat(
+    const code = `const msg = {}; msg.sender = "${from}"; const tx = {}; tx.id = "${txid}"; const blobvm = {msg, tx}; `.concat(
       normalizedSourceCode,
     );
     const state = contract.LatestState;
